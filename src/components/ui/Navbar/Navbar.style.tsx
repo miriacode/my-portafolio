@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { HashLink } from "react-router-hash-link";
+
 
 interface NabvbarContainerProps {
   readonly extendNavbar: boolean;
@@ -10,6 +12,8 @@ export const NavbarContainer = styled.nav<NabvbarContainerProps>`
   background-color: black;
   display: flex;
   flex-direction: column;
+  position:sticky;
+  top:0;
   @media (min-width: 700px) {
     height: 80px;
   }
@@ -39,7 +43,7 @@ export const NavbarLinkContainer = styled.div`
   display: flex;
 `;
 
-export const NavbarLink = styled.div`
+export const NavbarLink = styled(HashLink)`
   color: white;
   font-size: x-large;
   font-family: Arial, Helvetica, sans-serif;
@@ -50,7 +54,7 @@ export const NavbarLink = styled.div`
   }
 `;
 
-export const NavbarLinkExtended = styled.div`
+export const NavbarLinkExtended = styled(HashLink)`
   color: white;
   font-size: x-large;
   font-family: Arial, Helvetica, sans-serif;

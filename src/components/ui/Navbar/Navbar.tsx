@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
+// import { Link } from "react-router-dom";
 import {
   NavbarContainer,
   LeftContainer,
@@ -16,15 +17,23 @@ import LogoImg from "../../../assets/images/logo.png";
 function Navbar() {
   const [extendNavbar, setExtendNavbar] = useState(false);
 
+ 
+  //  const handleClick = () => {
+  //     window.scrollTo(0, myRef.current.offsetTop)
+  //  }
+
   return (
     <NavbarContainer extendNavbar={extendNavbar}>
       <NavbarInnerContainer>
         <LeftContainer>
           <NavbarLinkContainer>
-            <NavbarLink> Home</NavbarLink>
-            <NavbarLink> Products</NavbarLink>
-            <NavbarLink> Contact Us</NavbarLink>
-            <NavbarLink> About Us</NavbarLink>
+            <NavbarLink to={{ pathname: "/", hash: "#home" }}>Home</NavbarLink>
+            <NavbarLink to={{ pathname: "/", hash: "#about" }}>About</NavbarLink>
+            <NavbarLink to={{ pathname: "/", hash: "#skills" }}>Skills</NavbarLink>
+            <NavbarLink to={{ pathname: "/", hash: "#projects" }}>Projects</NavbarLink>
+            <NavbarLink to={{ pathname: "/", hash: "#experience" }}>Experience</NavbarLink>
+            <NavbarLink to={{ pathname: "/", hash: "#testimonials" }}> Testimonials</NavbarLink>
+            <NavbarLink to={{ pathname: "/", hash: "#contact" }}>Contact</NavbarLink>
 
             <OpenLinksButton
               onClick={() => {
@@ -41,10 +50,13 @@ function Navbar() {
       </NavbarInnerContainer>
       {extendNavbar && (
         <NavbarExtendedContainer>
-          <NavbarLinkExtended> Home</NavbarLinkExtended>
-          <NavbarLinkExtended> Products</NavbarLinkExtended>
-          <NavbarLinkExtended> Contact Us</NavbarLinkExtended>
-          <NavbarLinkExtended> About Us</NavbarLinkExtended>
+          <NavbarLinkExtended to={{ pathname: "/", hash: "#home" }}>Home</NavbarLinkExtended>
+          <NavbarLinkExtended to={{ pathname: "/", hash: "#about" }}>About</NavbarLinkExtended>
+          <NavbarLinkExtended to={{ pathname: "/", hash: "#skills" }}>Skills</NavbarLinkExtended>
+          <NavbarLinkExtended to={{ pathname: "/", hash: "#projects" }}>Projects</NavbarLinkExtended>
+          <NavbarLinkExtended to={{ pathname: "/", hash: "#experience" }}>Experience</NavbarLinkExtended>
+          <NavbarLinkExtended to={{ pathname: "/", hash: "#testimonials" }}> Testimonials</NavbarLinkExtended>
+          <NavbarLinkExtended to={{ pathname: "/", hash: "#contact" }}>Contact</NavbarLinkExtended>
         </NavbarExtendedContainer>
       )}
     </NavbarContainer>
