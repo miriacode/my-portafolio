@@ -2,8 +2,8 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <div id="home">
-      <h2>Home</h2>
+    <div >
+      <h2 id="home">Home</h2>
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus consectetur necessitatibus quaerat perspiciatis, saepe, totam ea beatae voluptate autem ducimus sint ad ab voluptas culpa. Architecto nobis veritatis omnis reiciendis.
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, ducimus aperiam? Voluptatem optio magni sit! Consectetur, doloribus hic repudiandae obcaecati impedit provident tempora illo corrupti, cumque quam quidem veniam labore.
       Similique accusantium dolore, perspiciatis perferendis deserunt blanditiis eum esse ex minima iure quaerat nobis corporis corrupti voluptatum excepturi libero cumque molestias qui quibusdam incidunt ad quidem fugiat quia ut. Eaque.
