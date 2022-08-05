@@ -19,6 +19,12 @@ export const NavbarContainer = styled.nav<NavbarContainerProps>`
   @media (min-width: 700px) {
     height: 80px;
   }
+  @media (min-width: 1200px) {
+    padding:1rem 10rem;
+  }
+  @media (min-width: 1800px) {
+    padding:1rem 12rem;
+  }
 `;
 
 export const NavbarInnerContainer = styled.div`
