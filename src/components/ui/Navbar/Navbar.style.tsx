@@ -55,7 +55,7 @@ export const NavbarLinkContainer = styled.div`
 
 export const NavbarLink = styled(HashLink)`
   color: var(--text-primary-color);
-  font-size:medium;
+  font-size:large;
   font-weight:600;
   text-decoration: none;
   margin: 0.9rem;
