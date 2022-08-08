@@ -1,9 +1,11 @@
 import React from 'react'
+import { AnimatedTitle } from '../../components/ui/Title/Title.style'
+import { ProjectSection } from './Projects.style'
 
 const Projects = () => {
   return (
-    <div id="projects">
-      <h2>Projects</h2>
+    <ProjectSection id="projects">
+      <AnimatedTitle>Projects</AnimatedTitle>
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus consectetur necessitatibus quaerat perspiciatis, saepe, totam ea beatae voluptate autem ducimus sint ad ab voluptas culpa. Architecto nobis veritatis omnis reiciendis.
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, ducimus aperiam? Voluptatem optio magni sit! Consectetur, doloribus hic repudiandae obcaecati impedit provident tempora illo corrupti, cumque quam quidem veniam labore.
       Similique accusantium dolore, perspiciatis perferendis deserunt blanditiis eum esse ex minima iure quaerat nobis corporis corrupti voluptatum excepturi libero cumque molestias qui quibusdam incidunt ad quidem fugiat quia ut. Eaque.
@@ -16,7 +18,7 @@ const Projects = () => {
       Sequi vero, eius, similique perferendis quidem quaerat error tempore veniam dolores, provident repellendus at cum doloribus nemo quam illum quia consequuntur architecto reprehenderit et. Nostrum porro eum magnam ab culpa?
       Ipsa illum omnis illo voluptatum esse repellat id repellendus autem excepturi voluptas natus, tenetur ducimus facere expedita neque laboriosam sed aliquam totam similique eaque iusto. Neque sed impedit voluptates id.
       </p>
-    </div>
+    </ProjectSection>
   )
 }
 

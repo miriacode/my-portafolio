@@ -23,6 +23,7 @@ body{
   --paragraph-size-1200:1.23rem;
   --paragraph-size-1800:x-large;
 
+  /* Colors DarkMode */
   --text-primary-color:white;
   --hover-text-primary-color:rgb(199, 198, 198);
 

@@ -8,7 +8,7 @@ export const HomeSection = styled.section`
     padding-top:80px;
     height:100vh;
 `
-export const Title = styled.h2`
-    color:red;
-`
+// export const Title = styled.h2`
+//     color:red;
+// `
 
