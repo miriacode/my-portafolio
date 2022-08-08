@@ -3,11 +3,11 @@ import styled from "styled-components";
 
 export const AboutSection = styled.section`
     display:block;
-    padding-top:100px;
+    padding-top:80px;
 `;
 
 export const Paragraph = styled.p`
-    height:80vh;
+    height:70vh;
     padding:1.8rem 1rem;
     font-size:var(--paragraph-size-320);
 

@@ -25,5 +25,5 @@ export const AnimatedTitle = styled.h2`
     background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    /* border: 2px solid red; */
+    border: 2px solid red;
 `;

@@ -7,15 +7,25 @@ const hoverSkillLogo = css`
     }    
 `
 export const SkillsSection = styled.section`
+    /* padding-top:80px;
+    height:125vh;
+     */
+    display:block;
     padding-top:80px;
-    height:100vh;
+    /* background-color:pink; */
 
     @media (min-width: 1200px) {
-      padding:1rem 25rem;
+      /* padding-top:80px;
+      padding-left: 25%;
+      padding-right: 25%; */
+      height:auto;
+      padding-left: 25rem;
+      padding-right: 25rem;
     }
-    @media (min-width: 1800px) {
-      padding:1rem 30rem;
-    }
+    /* @media (min-width: 1800px) {
+      padding-left: 30rem;
+      padding-right: 30rem;
+    } */
 `
 export const SkillsContainer = styled.article`
     width:100%;
@@ -25,6 +35,7 @@ export const SkillsContainer = styled.article`
     display:grid;
     grid-template-columns:repeat(auto-fit, minmax(95px,1fr));
     grid-gap: 5% 2.5%;
+    align-items:center;
 
     @media (min-width: 1800px) {
         grid-template-columns:repeat(auto-fit, minmax(115px,1fr));
@@ -35,15 +46,26 @@ export const Skill = styled.div`
 `
 
 export const SkillLogo = styled.img`
-    width:60%;
-    height:60%;
+    width:52%;
+    height:52%;
     ${hoverSkillLogo}
+    @media (min-width: 1800px) {
+        width:62%;
+        height:62%; 
+    }
 `
 
 export const SkillLogoLarger = styled.img`
-    width:95px;
-    height:60px;
+    /* width:95px;
+    height:60px; */
+
+    width:57%;
+    height:52%;
     ${hoverSkillLogo}
+    @media (min-width: 1800px) {
+        width:67%;
+        height:62%; 
+    }
 `
 export const SkillLabel = styled.p`
     font-weight:600;
