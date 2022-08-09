@@ -7,25 +7,14 @@ const hoverSkillLogo = css`
     }    
 `
 export const SkillsSection = styled.section`
-    /* padding-top:80px;
-    height:125vh;
-     */
     display:block;
     padding-top:80px;
-    /* background-color:pink; */
 
     @media (min-width: 1200px) {
-      /* padding-top:80px;
-      padding-left: 25%;
-      padding-right: 25%; */
       height:auto;
       padding-left: 25rem;
       padding-right: 25rem;
     }
-    /* @media (min-width: 1800px) {
-      padding-left: 30rem;
-      padding-right: 30rem;
-    } */
 `
 export const SkillsContainer = styled.article`
     width:100%;
@@ -56,9 +45,6 @@ export const SkillLogo = styled.img`
 `
 
 export const SkillLogoLarger = styled.img`
-    /* width:95px;
-    height:60px; */
-
     width:57%;
     height:52%;
     ${hoverSkillLogo}
