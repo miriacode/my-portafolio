@@ -11,7 +11,8 @@ import reduxLogo  from './../../assets/images/redux-logo.png'
 import reactTestingLibraryLogo  from './../../assets/images/react-testing-library-logo.png'
 import jestLogo  from './../../assets/images/jest-logo.png'
 import sassLogo from './../../assets/images/sass-logo.png'
-import nodeLogo from './../../assets/images/node-js-logo-dark-mode.webp'
+import tailwindLogo from './../../assets/images/tailwind-logo.png'
+import nodeLogo from './../../assets/images/node-js-logo-dark-mode.png'
 import expressLogo from './../../assets/images/express-logo.png'
 import mongoDBLogo from './../../assets/images/mongodb-logo.png'
 import javaLogo from './../../assets/images/java-logo.png'
@@ -59,7 +60,11 @@ const Skills = () => {
           <SkillLabel>SASS</SkillLabel>
         </Skill>
         <Skill>
-          <SkillLogoLarger src={nodeLogo}></SkillLogoLarger>
+          <SkillLogo src={tailwindLogo}></SkillLogo>
+          <SkillLabel>Tailwind</SkillLabel>
+        </Skill>
+        <Skill>
+          <SkillLogo src={nodeLogo}></SkillLogo>
           <SkillLabel>Node</SkillLabel>
         </Skill>
         <Skill>

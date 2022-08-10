@@ -8,10 +8,12 @@ const hoverSkillLogo = css`
 `
 export const SkillsSection = styled.section`
     display:block;
+    height:725px;
     padding-top:80px;
+    /* background-color:yellow; */
 
     @media (min-width: 1200px) {
-      height:auto;
+      height:525px;
       padding-left: 25rem;
       padding-right: 25rem;
     }

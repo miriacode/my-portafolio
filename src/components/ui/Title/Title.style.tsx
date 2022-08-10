@@ -25,5 +25,12 @@ export const AnimatedTitle = styled.h2`
     background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    border: 2px solid red;
+    
+
+    @media (min-width: 1200px) {
+      /* font-size:var(--paragraph-size-1200);
+      padding:1rem 18rem; */
+      margin-top:15vh;
+      border: 2px solid red;
+    }
 `;
