@@ -52,8 +52,6 @@ const Projects = () => {
         {projects.map((project: any) => (
           <ProjectCard>
             <TopSection>
-
-            
               <ProjectImg src={project.image}></ProjectImg>
               <GithubButtons githubUrl={project.github} demoUrl={project.demo}></GithubButtons>
             </TopSection>
