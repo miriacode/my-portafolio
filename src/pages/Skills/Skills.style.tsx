@@ -39,6 +39,8 @@ export const Skill = styled.div`
 export const SkillLogo = styled.img`
     width:52%;
     height:52%;
+    max-width:56px;
+    max-height:56px;
     ${hoverSkillLogo}
     @media (min-width: 1800px) {
         width:62%;

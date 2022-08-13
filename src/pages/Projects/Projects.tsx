@@ -1,12 +1,13 @@
 import React from "react";
 import { AnimatedTitle } from "../../components/ui/Title/Title.style";
-import { ProjectSection, ProjectCard, TopSection, BottomSection,ProjectTitle, ProjectDescription, ProjectBox, ProjectTechnology} from "./Projects.style";
+import { ProjectSection, ProjectCard, TopSection, BottomSection,ProjectTitle, ProjectDescription, ProjectBox, ProjectTechnology, ProjectImg} from "./Projects.style";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { projects } from "./../../data/projects";
 import j from './../../assets/images/project-images/money-tracker-app-image.jpg'
+import GithubButtons from "../../components/ui/GithubButtons/GithubButtons";
 
 var settings = {
   dots: true,
@@ -50,7 +51,11 @@ const Projects = () => {
       <Slider {...settings}>
         {projects.map((project: any) => (
           <ProjectCard>
-            <TopSection src={project.image}>
+            <TopSection>
+
+            
+              <ProjectImg src={project.image}></ProjectImg>
+              <GithubButtons githubUrl={project.github} demoUrl={project.demo}></GithubButtons>
             </TopSection>
             <BottomSection>
               <ProjectTitle>{project.title}</ProjectTitle>

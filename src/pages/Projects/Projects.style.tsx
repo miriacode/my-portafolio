@@ -9,21 +9,29 @@ export const ProjectSection = styled.section`
 `
 
 export const ProjectCard = styled.article`
-  background-color:peru;
-  border:1rem solid var(--background-primary-color);
-  height:54vh;
-  min-height:300px;
+  /* background-color:peru; */
+  border:1rem solid transparent;
+  border-top:0;
+  height:55vh;
+  min-height:400px;
   overflow:hidden;
   border-radius:0 0 1.5rem 1.5rem;
 `
-export const TopSection = styled.img`
+export const TopSection = styled.div`
   height:42%;
-  transition: transform .2s;
+  width:100%;
+  background-color:blue;
+  /* transition: transform .2s;
     &:hover{
         transform: scale(1.04);
     }
-    display:flex;  
+  display:flex;   */
+  position:relative;
 `
+export const ProjectImg = styled.img`
+  height:42%;
+`
+
 export const BottomSection = styled.div`
   background-color:var(--background-primary-color);
   
@@ -42,7 +50,7 @@ export const ProjectDescription = styled.p`
 
 export const ProjectBox = styled.div`
   width:100%;
-  height:20vh;
+  height:30vh;
   background-color:yellow;
 `
 

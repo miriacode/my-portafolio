@@ -5,7 +5,7 @@ interface projectsType{
     image: string;
     technologies: string[];
     github: string;
-    deploy: string;
+    demo: string;
 }
 
 export const projects:projectsType[] = [
@@ -15,17 +15,17 @@ export const projects:projectsType[] = [
         description:"Money Tracker App es una es una aplicación diseñada para ayudar a las personas a llevar un mejor control de sus ingresos y gastos",
         image:"https://raw.githubusercontent.com/miriacode/money-tracker/main/project-images/categories-dark.jpg",
         technologies:["React", "SASS", "NodeJS", "Express"],
-        github:"",
-        deploy:"",
+        github:"https://github.com/miriacode/money-tracker",
+        demo:"https://todo-app-frontend-mentor-miriacode.netlify.app/",
     },
     {
         id:2,
         title:"REDUX Store",
         description:"Lorem ipsum smsksksmsmss",
-        image:"",
+        image:"https://raw.githubusercontent.com/miriacode/money-tracker/main/project-images/categories-dark.jpg",
         technologies:["React", "Typescript", "CSS"],
         github:"",
-        deploy:"",
+        demo:"",
     },
     {
         id:3,
@@ -34,7 +34,7 @@ export const projects:projectsType[] = [
         image:"",
         technologies:["JS", "HTML", "CSS"],
         github:"",
-        deploy:"",
+        demo:"",
     },
     {
         id:4,
@@ -43,7 +43,7 @@ export const projects:projectsType[] = [
         image:"",
         technologies:["JS", "HTML", "CSS"],
         github:"",
-        deploy:"",
+        demo:"",
     },
     {
         id:5,
@@ -52,7 +52,7 @@ export const projects:projectsType[] = [
         image:"",
         technologies:["JS", "HTML", "CSS"],
         github:"",
-        deploy:"",
+        demo:"",
     },
     {
         id:6,
@@ -61,7 +61,7 @@ export const projects:projectsType[] = [
         image:"",
         technologies:["JS", "HTML", "CSS"],
         github:"",
-        deploy:"",
+        demo:"",
     },
     {
         id:7,
@@ -70,6 +70,6 @@ export const projects:projectsType[] = [
         image:"",
         technologies:["JS", "HTML", "CSS"],
         github:"",
-        deploy:"",
+        demo:"",
     }
 ]
