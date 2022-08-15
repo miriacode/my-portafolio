@@ -1,13 +1,29 @@
 import React from "react";
 import { AnimatedTitle } from "../../components/ui/Title/Title.style";
-import { ProjectSection, ProjectCard, TopSection, BottomSection,ProjectTitle, ProjectDescription, ProjectBox, ProjectTechnology, ProjectImg} from "./Projects.style";
+import {
+  ProjectSection,
+  ProjectCard,
+  TopSection,
+  BottomSection,
+  ProjectTitle,
+  ProjectDescription,
+  ProjectBox,
+  ProjectTechnology,
+  ProjectImg,
+  ButtonContainer,
+  Link,
+  Icon,
+} from "./Projects.style";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { projects } from "./../../data/projects";
-import j from './../../assets/images/project-images/money-tracker-app-image.jpg'
-import GithubButtons from "../../components/ui/GithubButtons/GithubButtons";
+import { projects } from "../../data/projects";
+import j from "./../../assets/images/project-images/money-tracker-app-image.jpg";
+// import LinkButtons from "../../components/ui/LinkButtons/LinkButtons";
+
+import githubLogo from "../../assets/images/github-logo.png";
+import externalLinkLogo from "./../../assets/images/external-link-logo.png";
 
 var settings = {
   dots: true,
@@ -47,13 +63,22 @@ var settings = {
 const Projects = () => {
   return (
     <ProjectSection id="projects">
-      <AnimatedTitle >Projects</AnimatedTitle>
+      <AnimatedTitle>Projects</AnimatedTitle>
       <Slider {...settings}>
         {projects.map((project: any) => (
           <ProjectCard>
             <TopSection>
-              <ProjectImg src={project.image}></ProjectImg>
-              <GithubButtons githubUrl={project.github} demoUrl={project.demo}></GithubButtons>
+              <ProjectImg imgUrl={project.image}></ProjectImg>
+              {/* <LinkButtons githubUrl={project.github} demoUrl={project.demo}></LinkButtons> */}
+              <ButtonContainer>
+                <Link href={project.github}>
+                  <Icon src={githubLogo} alt="github-logo"></Icon>
+                </Link>
+                <Link href={project.demo}>
+                  <Icon src={externalLinkLogo} alt="githubs-logo"></Icon>
+                </Link>
+              </ButtonContainer>
+              
             </TopSection>
             <BottomSection>
               <ProjectTitle>{project.title}</ProjectTitle>
