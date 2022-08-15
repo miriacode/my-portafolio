@@ -1,25 +1,92 @@
-import React from 'react'
-import { AnimatedTitle } from '../../components/ui/Title/Title.style'
-import { ProjectSection } from './Projects.style'
+import React from "react";
+import { AnimatedTitle } from "../../components/ui/Title/Title.style";
+import {
+  ProjectSection,
+  ProjectCard,
+  TopSection,
+  BottomSection,
+  ProjectTitle,
+  ProjectDescription,
+  ProjectBox,
+  ProjectTechnology,
+  ProjectImg,
+  ButtonContainer,
+  Link,
+  Icon,
+} from "./Projects.style";
+
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { projects } from "../../data/projects";
+import githubLogo from "../../assets/images/github-logo.png";
+import externalLinkLogo from "./../../assets/images/external-link-logo.png";
+
+var settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  initialSlide: 0,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        initialSlide: 2,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+};
 
 const Projects = () => {
   return (
     <ProjectSection id="projects">
       <AnimatedTitle>Projects</AnimatedTitle>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus consectetur necessitatibus quaerat perspiciatis, saepe, totam ea beatae voluptate autem ducimus sint ad ab voluptas culpa. Architecto nobis veritatis omnis reiciendis.
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, ducimus aperiam? Voluptatem optio magni sit! Consectetur, doloribus hic repudiandae obcaecati impedit provident tempora illo corrupti, cumque quam quidem veniam labore.
-      Similique accusantium dolore, perspiciatis perferendis deserunt blanditiis eum esse ex minima iure quaerat nobis corporis corrupti voluptatum excepturi libero cumque molestias qui quibusdam incidunt ad quidem fugiat quia ut. Eaque.
-      Distinctio soluta delectus non aliquam harum iusto possimus expedita eveniet recusandae quia. Autem doloremque ullam eaque aliquid sit molestias, tempora animi reprehenderit ducimus praesentium, laborum omnis nesciunt fugiat maiores eligendi!
-      Nostrum officiis numquam, tempora eveniet fugit iusto ipsa debitis dolorem nesciunt earum aspernatur fuga magni esse cupiditate sed nisi ex, corrupti, quo deserunt repudiandae quos vel ipsam minus. Adipisci, fugiat.
-      Recusandae sapiente ab deserunt quas explicabo. Pariatur praesentium libero ipsa aperiam repudiandae sunt molestias ad consequatur ex, quo totam porro consectetur minima iste dignissimos? Reiciendis autem laudantium similique maiores inventore.
-      Sunt aperiam veniam quae at, minus esse, corporis perspiciatis quia voluptatem ducimus alias illo repellendus dolorem id cupiditate quidem tempore, ex ad repellat. Modi eius illo omnis alias, impedit cum?
-      Aliquid iusto eos iure magnam tempora, maiores debitis harum corporis dolore, autem esse doloremque tenetur provident accusantium nemo, nobis eligendi ut repudiandae beatae qui veniam. At quis suscipit numquam eius?
-      Perferendis nihil corrupti dignissimos accusantium excepturi recusandae corporis quidem dicta quam quos delectus rem repellat, sint temporibus! Totam, quis quos? Omnis ipsa dolor velit nostrum voluptatem quia consectetur. Ratione, delectus!
-      Sequi vero, eius, similique perferendis quidem quaerat error tempore veniam dolores, provident repellendus at cum doloribus nemo quam illum quia consequuntur architecto reprehenderit et. Nostrum porro eum magnam ab culpa?
-      Ipsa illum omnis illo voluptatum esse repellat id repellendus autem excepturi voluptas natus, tenetur ducimus facere expedita neque laboriosam sed aliquam totam similique eaque iusto. Neque sed impedit voluptates id.
-      </p>
+      <Slider {...settings}>
+        {projects.map((project: any) => (
+          <ProjectCard>
+            <TopSection>
+              <ProjectImg imgUrl={project.image}></ProjectImg>
+              <ButtonContainer>
+                <Link href={project.github}>
+                  <Icon src={githubLogo} alt="github-logo"></Icon>
+                </Link>
+                <Link href={project.demo}>
+                  <Icon src={externalLinkLogo} alt="githubs-logo"></Icon>
+                </Link>
+              </ButtonContainer>
+            </TopSection>
+            <BottomSection>
+              <ProjectTitle>{project.title}</ProjectTitle>
+              <ProjectDescription>{project.description}</ProjectDescription>
+              <ProjectBox>
+                {project.technologies.map((el:string)=><ProjectTechnology>{el}</ProjectTechnology>)}
+              </ProjectBox>
+            </BottomSection>
+          </ProjectCard>
+        ))}
+      </Slider>
     </ProjectSection>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;

@@ -16,6 +16,7 @@ export const NavbarContainer = styled.nav<NavbarContainerProps>`
   flex-direction: column;
   position:sticky;
   top:0;
+  z-index:2;
   @media (min-width: 700px) {
     height: 80px;
   }
@@ -102,7 +103,7 @@ export const NavbarLinkExtended = styled(HashLink)`
   text-decoration: none;
   margin: 1.2rem;
   color: var(--text-primary-color);
-  transition: transform .3s;
+  transition: transform .3s;;
   &:hover{
     transform: scale(1.12);
   }
