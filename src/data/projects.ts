@@ -14,7 +14,7 @@ export const projects:projectsType[] = [
         title:"Money Tracker App",
         description:"Money Tracker App es una es una aplicación diseñada para ayudar a las personas a llevar un mejor control de sus ingresos y gastos",
         image:"https://raw.githubusercontent.com/miriacode/money-tracker/main/project-images/categories-dark.jpg",
-        technologies:["React", "SASS", "NodeJS", "Express"],
+        technologies:["React", "SASS", "NodeJS", "Express","React", "SASS", "NodeJS", "Express"],
         github:"https://github.com/miriacode/money-tracker",
         demo:"https://todo-app-frontend-mentor-miriacode.netlify.app/",
     },

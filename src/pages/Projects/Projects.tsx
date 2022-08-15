@@ -19,9 +19,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { projects } from "../../data/projects";
-import j from "./../../assets/images/project-images/money-tracker-app-image.jpg";
-// import LinkButtons from "../../components/ui/LinkButtons/LinkButtons";
-
 import githubLogo from "../../assets/images/github-logo.png";
 import externalLinkLogo from "./../../assets/images/external-link-logo.png";
 
@@ -69,7 +66,6 @@ const Projects = () => {
           <ProjectCard>
             <TopSection>
               <ProjectImg imgUrl={project.image}></ProjectImg>
-              {/* <LinkButtons githubUrl={project.github} demoUrl={project.demo}></LinkButtons> */}
               <ButtonContainer>
                 <Link href={project.github}>
                   <Icon src={githubLogo} alt="github-logo"></Icon>
@@ -78,18 +74,12 @@ const Projects = () => {
                   <Icon src={externalLinkLogo} alt="githubs-logo"></Icon>
                 </Link>
               </ButtonContainer>
-              
             </TopSection>
             <BottomSection>
               <ProjectTitle>{project.title}</ProjectTitle>
               <ProjectDescription>{project.description}</ProjectDescription>
               <ProjectBox>
-                {/* {project.technologies.map((tech: string) => {
-                  <li>{tech}</li>
-                })} */}
-                {/* {project.technologies.map((tech: string) => {
-                  <ProjectTechnology>{tech}</ProjectTechnology>;
-                })} */}
+                {project.technologies.map((el:string)=><ProjectTechnology>{el}</ProjectTechnology>)}
               </ProjectBox>
             </BottomSection>
           </ProjectCard>
