@@ -97,7 +97,6 @@ export const ProjectDescription = styled.p`
 export const ProjectBox = styled.ul`
   width:100%;
   height:30vh;
- 
   display:block;
   background-color:peru;
   display:grid;
