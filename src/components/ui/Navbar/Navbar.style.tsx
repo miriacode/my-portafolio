@@ -3,6 +3,7 @@ import { HashLink } from "react-router-hash-link";
 
 interface NavbarContainerProps {
   readonly extendNavbar: boolean;
+  // 
 };
 
 export const NavbarContainer = styled.nav<NavbarContainerProps>`
